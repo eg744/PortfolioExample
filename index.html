@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio framework</title>
     <link rel="stylesheet" type="text/css" href="/styles/globals.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <header>
         <!-- <img icon> -->
+        <div class="mobile-nav-toggle" aria-controls="primary-navigation" 
+        aria-expanded="false">
+        <!-- <div class="hamburger-button">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div> -->
+            
+            <span class="sr-only">
+                
+                Menu
+            </span>
+        </div>
+        <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
         <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation">
+                <li class="nav-item"><a href="">Home</a></li>
+                <li class="nav-item"><a href="">About</a></li>
+                <li class="nav-item"><a href="">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -22,9 +44,9 @@
     <section class="home-hero parallax--bg">
         <div class="container">
             <h1 class="title">My name<span>Web Developer
-            
+
                 </span>
-            
+
             </h1>
             <a href="" class="button button-accent">See my work</a>
         </div>
@@ -50,7 +72,7 @@
                 <a href="" class="button button-accent button-small">Project details</a>
             </figcaption>
         </figure>
-    
+
         <figure class="port-item">
             <!-- Fractal generator -->
             <img src="portfolio-02.jpg" alt="portfolio item 2: Fractal generator">
@@ -59,14 +81,15 @@
                 <a href="" class="button button-accent button-small">Project details</a>
             </figcaption>
         </figure>
-    
-        
-    
+
+
+
     </section>
 
     <section class="cta">
         <div class="container">
-            <h1 class="title title-cta">Like what you see?<span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+            <h1 class="title title-cta">Like what you see?<span>Lorem, ipsum dolor sit amet consectetur adipisicing
+                    elit.</span>
             </h1>
             <a href="" class="button button-dark">Contact Me<a>
         </div>
@@ -77,9 +100,10 @@
             <!--spans columns-->
             <div class="col-3">
                 <p>Shoreditch bespoke leggings, tote bag williamsburg woke retro readymade scenester brunch art party
-                    farm-to-table pug. Wayfareres lyft prism, edison bulb distillery pok pok narwhal pinterest poke. </p>
+                    farm-to-table pug. Wayfareres lyft prism, edison bulb distillery pok pok narwhal pinterest poke.
+                </p>
             </div>
-    
+
             <div class="col-1">
                 <ul class="unstyled-list">
                     <li><strong>Shoreditch</strong></li>
@@ -89,10 +113,11 @@
                     <li>Scenester</li>
                 </ul>
             </div>
-    
-            
+
+
         </div>
     </footer>
-    
+
 </body>
+
 </html>
