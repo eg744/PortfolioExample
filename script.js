@@ -32,23 +32,43 @@ document.addEventListener('DOMContentLoaded', () => {
 		style.innerHTML = '.';
 	}
 
-	function animateCssTunnel() {
-		const tunnelStyle = {};
-
+	function createCssTunnel(
+		width,
+		height,
+		borderRadius,
+		border,
+		boxShadowOuter,
+		boxShadowInner
+	) {
 		// const tunnelFrame = newDiv.classList.add('animate-frame');
 		const cssTunnelElement = document.getElementById(
-			'animate-css-container'
+			'tunnel-css-container'
 		);
 
 		for (let i = 0; i < 2; i++) {
 			const newFrame = document.createElement('div');
-			newFrame.style.cssText;
+			newFrame.classList.add('animate-frame');
 
-			// newFrame.classList.add('animate-frame');
+			newFrame.style.cssText = `width: ${width};
+				height: ${height};
+				border-radius: ${borderRadius};
+				position: absolute;
+				border: ${border};
+	
+
+				box-shadow: ${boxShadowOuter},
+				${boxShadowInner};`;
 
 			cssTunnelElement.appendChild(newFrame);
 			console.log(i);
 		}
 	}
-	animateCssTunnel();
+	createCssTunnel(
+		'100%',
+		'100%',
+		'50px',
+		'5px #e68608 solid',
+		'0px 0px 20px #b45c0a, inset 0px 0px 20px #b45c0a',
+		'0px 0px 60px #d11d4a, inset 0px 0px 60px #d11d4a'
+	);
 });
