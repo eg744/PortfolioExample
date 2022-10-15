@@ -19,17 +19,46 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
-	// Insert new html element inside existing element
-	function insertAfter(newNode, referenceNode) {
-		referenceNode.parentNode.insertBefore(
-			newNode,
-			referenceNode.nextSibling
-		);
-	}
+	// function setTunnelStyles(){
+	// 	const styles={width: `${width}`,
+	// 			height: `${height}`,
+	// 			border-radius: ${borderRadius};
+	// 			position: absolute;
+	// 			border: ${border};
 
-	function setCssTunnelStyle() {
-		let style = document.createElement('style');
-		style.innerHTML = '.';
+	// 			box-shadow: ${boxShadowOuter},
+	// 			${boxShadowInner};
+	// 			transform: rotate(${rotateDeg}) translateY(${translateY}) translateZ(${translateZ})`}`
+	// }
+
+	function setTunnelStyles(
+		width,
+		height,
+		borderRadius,
+		border,
+		boxShadowOuter,
+		boxShadowInner,
+		rotateDeg,
+		translateY,
+		translateZ,
+		opacity
+	) {
+		const newFrame = document.createElement('div');
+
+		newFrame.classList.add('animate-frame');
+
+		newFrame.style.cssText = `width: ${width};
+				height: ${height};
+				border-radius: ${borderRadius};
+				position: absolute;
+				border: ${border};
+	
+
+				box-shadow: ${boxShadowOuter},
+				${boxShadowInner};
+				transform: rotate(${rotateDeg}) translateY(${translateY}) translateZ(${translateZ})`;
+
+		return newFrame;
 	}
 
 	function createCssTunnel(
@@ -38,37 +67,54 @@ document.addEventListener('DOMContentLoaded', () => {
 		borderRadius,
 		border,
 		boxShadowOuter,
-		boxShadowInner
+		boxShadowInner,
+		rotateDeg,
+		translateY,
+		translateZ,
+		opacity,
+		animationDelay
 	) {
-		// const tunnelFrame = newDiv.classList.add('animate-frame');
 		const cssTunnelElement = document.getElementById(
 			'tunnel-css-container'
 		);
 
-		for (let i = 0; i < 2; i++) {
+		for (let i = 0; i < 10; i++) {
 			const newFrame = document.createElement('div');
-			newFrame.classList.add('animate-frame');
 
-			newFrame.style.cssText = `width: ${width};
-				height: ${height};
-				border-radius: ${borderRadius};
+			newFrame.classList.add('animate-frame');
+			newFrame.style.cssText = `width: ${width}%;
+				height: ${height}%;
+				border-radius: ${borderRadius}px;
 				position: absolute;
 				border: ${border};
-	
 
 				box-shadow: ${boxShadowOuter},
-				${boxShadowInner};`;
+				${boxShadowInner};
+				transform: rotate(${rotateDeg}deg) translateY(${translateY}px) translateZ(${translateZ}px);
+				opacity: ${opacity};
+				animation-delay:${animationDelay}s;`;
 
 			cssTunnelElement.appendChild(newFrame);
-			console.log(i);
+			// console.log(opacity);
+			width = width - 5;
+			rotateDeg = rotateDeg - 5;
+			translateY = translateY + 50;
+			translateZ = translateZ - 10;
+			opacity = opacity - 0.06;
+			animationDelay = animationDelay + 0.2;
 		}
 	}
 	createCssTunnel(
-		'100%',
-		'100%',
-		'50px',
+		100,
+		100,
+		50,
 		'5px #e68608 solid',
 		'0px 0px 20px #b45c0a, inset 0px 0px 20px #b45c0a',
-		'0px 0px 60px #d11d4a, inset 0px 0px 60px #d11d4a'
+		'0px 0px 60px #d11d4a, inset 0px 0px 60px #d11d4a',
+		40,
+		0,
+		0,
+		1,
+		0.1
 	);
 });
