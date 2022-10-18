@@ -13,24 +13,27 @@
 <body>
     <header>
         <!-- <img icon> -->
-        <div class="mobile-nav-toggle" aria-controls="primary-navigation" 
-        aria-expanded="false">
-        <!-- <div class="hamburger-button">
+        <div class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <!-- <div class="hamburger-button">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div> -->
-            
+
             <span class="sr-only">
-                
+
                 Menu
             </span>
         </div>
         <div class="hamburger">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+            <a>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </a>
+
         </div>
+
         <nav>
 
             <ul id="primary-navigation" data-visible="false" class="primary-navigation">
@@ -43,55 +46,53 @@
 
     <section class="home-hero parallax--bg">
         <div class="container">
-            <h1 class="title">My name<span>Web Developer
-
-                </span>
+            <h1 class="title">My name<span>Web Developer</span>
 
             </h1>
             <a href="" class="button button-accent">See my work</a>
         </div>
     </section>
 
-    <!-- <div class="container">
+    <div class="container">
         <section class="home-about">
             <div class="home-about-textbox parallax--box">
-                <h1>Who I am</h1>
+                <h2>Who I am</h2>
                 <p><strong>Computers</strong> </p>
             </div>
         </section>
-    </div> -->
-    <section id="tunnel" 
-        
-    >
-        <div 
-        id="tunnel-css-container"
-        class="animate-css-container">
-        <!-- Children generated in script.js -->
+    </div>
+    <section id="tunnel">
+        <div id="tunnel-css-container" class="animate-css-container">
+            <!-- Children generated in script.js -->
         </div>
-        
+
 
     </section>
 
     <section class="portfolio">
-        <h1>My Work:</h1>
+        <h2>My Work:</h2>
 
-        <figure class="port-item">
-            <!-- adopt a pet-->
-            <img src="portfolio-01.jpg" alt="portfolio item 1: Adopt A Pet">
-            <figcaption class="portfolio-description">
-                <p>adopt a pet</p>
-                <a href="" class="button button-accent button-small">Project details</a>
-            </figcaption>
-        </figure>
+        <div class="portfolio-container">
 
-        <figure class="port-item">
-            <!-- Fractal generator -->
-            <img src="portfolio-02.jpg" alt="portfolio item 2: Fractal generator">
-            <figcaption class="portfolio-description">
-                <p>Fractal generator</p>
-                <a href="" class="button button-accent button-small">Project details</a>
-            </figcaption>
-        </figure>
+            <figure class="portfolio-item">
+                <!-- adopt a pet-->
+                <img src="portfolio-01.jpg" alt="portfolio item 1: Adopt A Pet">
+                <figcaption class="portfolio-description">
+                    <p>adopt a pet</p>
+                    <a href="" class="button button-accent button-small">Project details</a>
+                </figcaption>
+            </figure>
+
+            <figure class="portfolio-item">
+                <!-- Fractal generator -->
+                <img src="portfolio-02.jpg" alt="portfolio item 2: Fractal generator">
+                <figcaption class="portfolio-description">
+                    <p>Fractal generator</p>
+                    <a href="" class="button button-accent button-small">Project details</a>
+                </figcaption>
+            </figure>
+        </div>
+
 
 
 

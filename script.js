@@ -31,36 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 			transform: rotate(${rotateDeg}) translateY(${translateY}) translateZ(${translateZ})`}`
 	// }
 
-	function setTunnelStyles(
-		width,
-		height,
-		borderRadius,
-		border,
-		boxShadowOuter,
-		boxShadowInner,
-		rotateDeg,
-		translateY,
-		translateZ,
-		opacity
-	) {
-		const newFrame = document.createElement('div');
-
-		newFrame.classList.add('animate-frame');
-
-		newFrame.style.cssText = `width: ${width};
-				height: ${height};
-				border-radius: ${borderRadius};
-				position: absolute;
-				border: ${border};
-	
-
-				box-shadow: ${boxShadowOuter},
-				${boxShadowInner};
-				transform: rotate(${rotateDeg}) translateY(${translateY}) translateZ(${translateZ})`;
-
-		return newFrame;
-	}
-
 	function createCssTunnel(
 		width,
 		height,
@@ -78,13 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			'tunnel-css-container'
 		);
 
-		for (let i = 0; i < 10; i++) {
+		for (let i = 0; i < 12; i++) {
 			const newFrame = document.createElement('div');
 
 			newFrame.classList.add('animate-frame');
 			newFrame.style.cssText = `width: ${width}%;
 				height: ${height}%;
-				border-radius: ${borderRadius}px;
+				border-radius: ${borderRadius}%;
 				position: absolute;
 				border: ${border};
 
@@ -95,23 +65,22 @@ document.addEventListener('DOMContentLoaded', () => {
 				animation-delay:${animationDelay}s;`;
 
 			cssTunnelElement.appendChild(newFrame);
-			// console.log(opacity);
-			width = width - 5;
-			rotateDeg = rotateDeg - 5;
-			translateY = translateY + 50;
+			width = width + 5;
+			// rotateDeg = rotateDeg - 5;
+			// translateY = translateY + 50;
 			translateZ = translateZ - 10;
-			opacity = opacity - 0.06;
+			opacity = opacity - 0.05;
 			animationDelay = animationDelay + 0.2;
 		}
 	}
 	createCssTunnel(
 		100,
 		100,
-		50,
+		100,
 		'5px #e68608 solid',
 		'0px 0px 20px #b45c0a, inset 0px 0px 20px #b45c0a',
 		'0px 0px 60px #d11d4a, inset 0px 0px 60px #d11d4a',
-		40,
+		180,
 		0,
 		0,
 		1,

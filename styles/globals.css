@@ -4,7 +4,7 @@
 
 * {
 	box-sizing: border-box;
-	transition: all ease-in-out 100ms;
+	transition: all ease-in-out 200ms;
 }
 
 body {
@@ -220,7 +220,7 @@ nav {
 	}
 }
 
-/* Animate css tunnel effect */
+/* ==Animate css tunnel effect== */
 .animate-css-container {
 	/* padding: 5rem; */
 
@@ -234,8 +234,9 @@ nav {
 	align-items: center;
 	justify-content: center;
 	perspective: 100px;
-	animation: zoom 20s ease-in-out infinite;
-	/* animation: rotate 100s ease-in-out infinite; */
+	animation: zoom 20s ease-in-out infinite, scale 30s ease-in-out infinite;
+
+	/* animation: rotate 20s ease-in-out infinite; */
 	/* animation-delay: 0; */
 }
 
@@ -259,25 +260,25 @@ nav {
 
 @keyframes breathe {
 	0% {
-		filter: brightness(1.5) contrast(2);
+		filter: brightness(1) contrast(2);
 	}
 	50% {
-		filter: brightness(1) contrast(4);
+		filter: brightness(1.8) contrast(4);
 	}
 	100% {
-		filter: brightness(1.5) contrast(2);
+		filter: brightness(1) contrast(2);
 	}
 }
 
 @keyframes zoom {
 	0% {
-		perspective: 200px;
+		perspective: 150px;
 	}
 	50% {
-		perspective: 100px;
+		perspective: 15px;
 	}
 	100% {
-		perspective: 200px;
+		perspective: 150px;
 	}
 }
 @keyframes rotate {
@@ -290,4 +291,27 @@ nav {
 	100% {
 		transform: rotate(360deg);
 	}
+}
+@keyframes scale {
+	0% {
+		transform: scale(85%, 120%);
+	}
+	50% {
+		transform: scale(20%, 150%);
+	}
+	100% {
+		transform: scale(85%, 120%);
+	}
+}
+
+/* ==Portfolio items== */
+.portfolio-container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+.portfolio-item {
+	margin: 2rem;
+	padding: 2rem;
 }
