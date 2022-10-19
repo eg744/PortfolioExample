@@ -14,7 +14,7 @@ body {
 
 	text-align: center;
 	overflow-x: hidden;
-	background: #000;
+	background: linear-gradient(#000 80%, rgb(36, 36, 36));
 }
 
 img {
@@ -281,6 +281,7 @@ nav {
 		perspective: 150px;
 	}
 }
+
 @keyframes rotate {
 	0% {
 		transform: rotate(0deg);
@@ -304,7 +305,33 @@ nav {
 	}
 }
 
+@keyframes tunnel-text-shadow {
+	0% {
+		text-shadow: 20px 10px 20px #b45c0a;
+	}
+	25% {
+		text-shadow: 50px 0px 40px #b45c0a;
+	}
+	50% {
+		text-shadow: 50px -20px 40px #b45c0a;
+	}
+	100% {
+		text-shadow: 20px 10px 20px #b45c0a;
+	}
+}
+
 /* ==Portfolio items== */
+/* .portfolio {
+	display: flex;
+} */
+.portfolio {
+	position: relative;
+}
+.portfolio h2 {
+	width: inherit;
+	height: fit-content;
+	animation: tunnel-text-shadow 30s linear infinite;
+}
 .portfolio-container {
 	display: flex;
 	justify-content: space-evenly;
@@ -312,6 +339,9 @@ nav {
 	flex-wrap: nowrap;
 }
 .portfolio-item {
+	border: 2px solid rgb(211, 154, 80);
+	border-radius: 10px;
+	/* box-shadow: 10px 5px 5px red; */
 	margin: 2rem;
 	padding: 2rem;
 }
