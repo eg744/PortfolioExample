@@ -1,5 +1,12 @@
 :root {
 	--gap: 2em;
+	--elem-color-main: rgb(211, 154, 80);
+	--elem-color-secondary: #ce6707;
+	--tunnel-color-primary: #b45c0a;
+	--tunnel-color-secondary: #d11d4a;
+
+	/* --main-bg-color: linear-gradient(#000 80%, rgb(36, 36, 36)); */
+	--main-bg-color: linear-gradient(#000 80%, #242424);
 }
 
 * {
@@ -10,11 +17,11 @@
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
-	color: rgb(211, 154, 80);
+	color: var(--elem-color-main);
 
 	text-align: center;
 	overflow-x: hidden;
-	background: linear-gradient(#000 80%, rgb(36, 36, 36));
+	background: var(--main-bg-color);
 }
 
 img {
@@ -48,7 +55,7 @@ nav {
 	/* align-items: stretch; */
 	justify-content: space-between;
 	background: #000;
-	color: rgb(211, 154, 80);
+	color: var(--elem-color-main);
 	font-size: 1.5rem;
 	/* margin: 0 auto; */
 
@@ -152,7 +159,7 @@ nav {
 
 .nav-item {
 	/* color: #fff; */
-	color: rgb(238, 176, 125);
+	color: var(--elem-color-main);
 
 	font-size: 1.75rem;
 	padding: 18px;
@@ -164,8 +171,8 @@ nav {
 
 .nav-item a:hover,
 .nav-item a:focus {
-	color: #ce6707;
-	border-color: #ce6707;
+	color: var(--elem-color-secondary);
+	border-color: var(--elem-color-secondary);
 }
 
 .hamburger div {
@@ -251,11 +258,13 @@ nav {
 	/* box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
 		0px 0px 60px #991a93, inset 0px 0px 60px #991a93; */
 
-	box-shadow: 0px 0px 20px #b45c0a, inset 0px 0px 20px #b45c0a,
-		0px 0px 60px #d11d4a, inset 0px 0px 60px #d11d4a;
+	box-shadow: 0px 0px 20px var(--tunnel-color-primary),
+		inset 0px 0px 20px var(--tunnel-color-primary),
+		0px 0px 60px var(--tunnel-color-secondary),
+		inset 0px 0px 60px var(--tunnel-color-secondary);
 
 	filter: brightness(0.95) contrast(3);
-	animation: breathe 2s ease-out infinite;
+	animation: breathe 2s ease-in-out infinite;
 }
 
 @keyframes breathe {
@@ -307,27 +316,26 @@ nav {
 
 @keyframes tunnel-text-shadow {
 	0% {
-		text-shadow: 20px 10px 20px #b45c0a;
+		text-shadow: 0px 0px 10px var(--tunnel-color-primary);
 	}
 	25% {
-		text-shadow: 50px 0px 40px #b45c0a;
+		text-shadow: 5px 10px 40px var(--tunnel-color-secondary);
 	}
 	50% {
-		text-shadow: 50px -20px 40px #b45c0a;
+		text-shadow: 10px 20px 40px var(--tunnel-color-secondary);
 	}
 	100% {
-		text-shadow: 20px 10px 20px #b45c0a;
+		text-shadow: 0px 0px 10px var(--tunnel-color-primary);
 	}
 }
 
 /* ==Portfolio items== */
-/* .portfolio {
-	display: flex;
-} */
+
 .portfolio {
 	position: relative;
 }
 .portfolio h2 {
+	display: inline;
 	width: inherit;
 	height: fit-content;
 	animation: tunnel-text-shadow 30s linear infinite;
@@ -339,7 +347,7 @@ nav {
 	flex-wrap: nowrap;
 }
 .portfolio-item {
-	border: 2px solid rgb(211, 154, 80);
+	border: 2px solid var(--elem-color-main);
 	border-radius: 10px;
 	/* box-shadow: 10px 5px 5px red; */
 	margin: 2rem;
