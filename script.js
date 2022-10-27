@@ -3,10 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const primaryNavbar = document.querySelector('.primary-navigation');
 
+	const pageTitle = document.querySelector('.title-name');
+
 	// Toggle mobile menu
 	navbarToggle.addEventListener('click', () => {
 		navbarToggle.classList.toggle('change');
 		primaryNavbar.classList.toggle('toggleNav');
+		pageTitle.classList.toggle('translateTitle');
 
 		const isVisible = primaryNavbar.getAttribute('data-visible');
 
