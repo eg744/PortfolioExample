@@ -160,13 +160,30 @@ nav {
 .nav-item {
 	/* color: #fff; */
 	color: var(--elem-color-main);
+	list-style: none;
+	box-sizing: border-box;
 
 	font-size: 1.75rem;
 	padding: 18px;
 }
 .nav-item a {
+	display: block;
 	text-decoration: none;
 	color: inherit;
+}
+/* Decorative underline */
+.nav-item a::after {
+	content: '';
+	display: block;
+	box-sizing: border-box;
+	width: 0;
+	height: 1px;
+	background-color: var(--elem-color-secondary);
+	transition: width 350ms ease;
+}
+.nav-item a:hover::after,
+.nav-item a:focus::after {
+	width: 100%;
 }
 
 .nav-item a:hover,
@@ -332,9 +349,13 @@ nav {
 /* ==Portfolio items== */
 
 .portfolio {
+	display: block;
+	margin: 10rem inherit;
+	/* padding: 5em; */
 	position: relative;
 }
 .portfolio h2 {
+	font-weight: 900;
 	display: inline;
 	width: inherit;
 	height: fit-content;
@@ -342,14 +363,21 @@ nav {
 }
 .portfolio-container {
 	display: flex;
+	height: 100%;
+	margin: 5rem;
 	justify-content: space-evenly;
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
 .portfolio-item {
-	border: 2px solid var(--elem-color-main);
-	border-radius: 10px;
-	/* box-shadow: 10px 5px 5px red; */
+	border: 5px var(--elem-color-main);
+	border-style: none inset;
+	border-radius: 20px;
 	margin: 2rem;
-	padding: 2rem;
+	padding: 3rem;
+}
+
+/* CTA */
+.cta {
+	display: block;
 }
