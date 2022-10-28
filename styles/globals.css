@@ -3,6 +3,7 @@
 	--font-small: 1em;
 	--font-med: 1.5em;
 	--font-med-large: 1.75em;
+	--font-large: 2em;
 	--elem-color-main: rgb(211, 154, 80);
 	--elem-color-secondary: #ce6707;
 	--tunnel-color-primary: #b45c0a;
@@ -32,9 +33,56 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+.btn {
+	box-sizing: border-box;
+
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	font-weight: bold;
+	outline: none;
+	border-radius: 3em;
+	border: none;
+	gap: 2em;
+	user-select: none;
+	/* -webkit-transition: background-color 100ms linear; */
+	/* transition: all 350ms linear; */
+	overflow: hidden;
+	cursor: pointer;
+	padding: 0.4em 1.5em;
+	/* border-bottom: 4px solid var(--elem-color-secondary); */
+	border-bottom: 4px solid var(--elem-color-secondary);
+	/* background-color: var(--elem-color-main); */
+	background: linear-gradient(
+		45deg,
+		var(--elem-color-main),
+		rgb(206, 138, 44)
+	);
+
+	color: #000;
+}
+.btn a:hover {
+	transition: all 30ms ease-in-out;
+}
+.btn:active {
+	scale: 0.95;
+}
+.btn:hover,
+.btn:focus {
+	background: linear-gradient(45deg, rgb(224, 166, 85), rgb(214, 146, 49));
+}
+.anim-btn-down {
+	animation-delay: 0.3s;
+}
+.anim-btn-up {
+	transform: translateY(2px);
+	opacity: 0;
+	animation: 500ms ease forwards;
+}
 
 .container {
-	width: 95%;
+	/* max-height: 10em; */
+	width: 90%;
 	max-width: 70em;
 	margin: 0 auto;
 	overflow: hidden;
@@ -85,7 +133,10 @@ nav {
 	align-items: center;
 	justify-content: space-evenly;
 	list-style: none;
-	background: #000;
+	/* background: #000; */
+	background: rgba(255, 255, 255, 0.06);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(10px);
 	color: #fff;
 
 	height: 100%;
@@ -128,9 +179,8 @@ nav {
 		height: 100vh;
 		width: 200px;
 		padding: 3rem;
-		border: 1px var(--burger-bg-color);
-		border-style: none solid none none;
-		border-radius: 0px 5px 5px 0px;
+		/* border-style: none solid none none; */
+		border-radius: 0px 10px 10px 0px;
 		transition: transform 0.25s ease-in-out;
 	}
 	.primary-navigation a > [aria-hidden='true'] {
