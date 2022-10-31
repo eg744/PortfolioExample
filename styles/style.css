@@ -96,7 +96,7 @@ img {
 	margin: 50px;
 	font-size: var(--font-med-large);
 	text-align: left;
-	color: #fff;
+	color: var(--burger-bg-color);
 }
 .subtitle {
 	display: block;
@@ -305,6 +305,7 @@ nav {
 	margin-top: 2rem;
 	height: 35rem;
 	background-image: url(/public/assets/hero-bg.jpg);
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 
@@ -449,7 +450,7 @@ nav {
 	border: 5px var(--elem-color-secondary);
 	border-style: none ridge;
 	/* border-style: none inset; */
-	border-radius: 20px;
+	border-radius: 40px;
 	margin: 2rem;
 	padding: 3rem;
 	/* border-image: repeating-linear-gradient(
