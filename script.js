@@ -76,17 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			animationDelay = animationDelay + 0.2;
 		}
 	}
-	createCssTunnel(
-		100,
-		100,
-		100,
-		'5px #e68608 solid',
-		'0px 0px 20px #b45c0a, inset 0px 0px 20px #b45c0a',
-		'0px 0px 60px #d11d4a, inset 0px 0px 60px #d11d4a',
-		180,
-		0,
-		0,
-		1,
-		0.1
-	);
+	// createCssTunnel(
+	// 	100,
+	// 	100,
+	// 	100,
+	// 	'5px #e68608 solid',
+	// 	'0px 0px 20px #b45c0a, inset 0px 0px 20px #b45c0a',
+	// 	'0px 0px 60px #d11d4a, inset 0px 0px 60px #d11d4a',
+	// 	180,
+	// 	0,
+	// 	0,
+	// 	1,
+	// 	0.1
+	// );
 });
