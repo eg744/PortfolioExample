@@ -4,6 +4,7 @@
 	--font-med: 1.5em;
 	--font-med-large: 1.75em;
 	--font-large: 2em;
+	--font-x-large: 3em;
 	--elem-color-main: rgb(211, 154, 80);
 	--elem-color-secondary: #ce6707;
 	--elem-color-main-opacity: rgba(211, 154, 80, 0.98);
@@ -96,9 +97,11 @@ img {
 }
 .title-name {
 	margin: 50px;
-	font-size: var(--font-med-large);
+	font-size: var(--font-x-large);
 	text-align: left;
 	color: var(--burger-bg-color);
+	text-shadow: -1px -1px 0 #844733, 1px -1px 0 #844733, -1px 1px 0 #844733,
+		1px 1px 0 #844733;
 }
 .subtitle {
 	display: block;
@@ -112,10 +115,10 @@ header {
 	margin: 0; */
 }
 nav {
-	width: 100%;
+	width: 100vw;
 	height: 6rem;
 	/* border-bottom: 3px solid #f1f1f1; */
-	padding: 0 0.5rem;
+	/* padding: 0 0.5rem; */
 	display: flex;
 	/* flex-direction: row; */
 	/* align-items: stretch; */
@@ -550,10 +553,13 @@ nav {
 }
 
 .technology-list {
+	padding: 0;
 	display: flex;
 	justify-content: space-evenly;
+	align-items: flex-start;
 	flex-wrap: wrap;
-	margin: var(--gap);
+	/* margin: var(--gap); */
+	margin: 0;
 	list-style: none;
 }
 .technology-list {
@@ -561,6 +567,9 @@ nav {
 }
 .technology-list li {
 	outline: 1px solid red;
+	max-width: 9rem;
+	max-height: 10rem;
+	padding-top: 2em;
 }
 
 .footer-icon {
@@ -568,5 +577,12 @@ nav {
 	scale: 0.5;
 }
 #js-icon {
-	scale: 0.5;
+	padding: 0 auto;
+	width: 100px;
+	scale: 0.4;
+}
+#next-icon {
+	background: rgb(172, 165, 165);
+	padding: 1rem;
+	scale: 0.35;
 }
