@@ -1,3 +1,5 @@
+/* Here's all my styling, working with plain CSS. I'm learning to be better about keeping it DRY but I still have work to do. I'm pretty sure there are optimizations I can make. I'm in the process of gaining a deeper understanding of styling and web design.*/
+
 :root {
 	--gap: 2em;
 	--font-small: 1em;
@@ -12,7 +14,6 @@
 	--tunnel-color-primary: #b45c0a;
 	--tunnel-color-secondary: #d11d4a;
 	--burger-bg-color: rgb(219, 197, 197);
-
 	/* --main-bg-color: linear-gradient(#000 80%, rgb(36, 36, 36)); */
 	--main-bg-color: linear-gradient(#000 70%, #242424);
 }
@@ -53,7 +54,6 @@ img {
 	overflow: hidden;
 	cursor: pointer;
 	padding: 0.4em 1.5em;
-	/* border-bottom: 4px solid var(--elem-color-secondary); */
 	border-bottom: 4px solid var(--elem-color-secondary);
 	/* background-color: var(--elem-color-main); */
 	background: linear-gradient(
@@ -587,8 +587,12 @@ nav {
 	min-height: 5rem;
 	max-height: 8rem;
 	height: 9rem;
-
-	/* padding-top: 2em; */
+}
+.secondary {
+	justify-content: center;
+}
+.secondary li {
+	margin-right: 2em;
 }
 .footer-icon {
 	display: block;
@@ -605,7 +609,6 @@ nav {
 	width: 100px;
 	scale: 0.4;
 }
-
 #react-icon {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
@@ -635,3 +638,5 @@ nav {
 	padding: 1rem;
 	scale: 0.65;
 }
+
+/* ==Contact form== */
