@@ -25,7 +25,6 @@
         <div class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
 
             <span class="sr-only">
-
                 Menu
             </span>
         </div>
@@ -41,27 +40,24 @@
         <nav>
 
             <ul id="primary-navigation" data-visible="false" class="primary-navigation">
-                <li class="nav-item"><a href="">Home</a></li>
-                <li class="nav-item"><a href="">About</a></li>
-                <li class="nav-item"><a href="">Contact</a></li>
+                <li class="nav-item"><a href="/#home">Home</a></li>
+                <li class="nav-item"><a href="/#about">About</a></li>
+                <li class="nav-item"><a href="/#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="home-hero parallax--bg">
+    <section id="home" class="home-hero parallax--bg">
         <div class="container">
-            <h1 class="title-name">Elijah Gillit<span class="subtitle">Web Developer</span>
-
-            </h1>
+            <h1 class="title-name">Elijah Gillit<span class="subtitle">Web Developer</span></h1>
             <a href="https://github.com/eg744" class="btn">See my work</a>
             <!-- <a class="btn">See my work</a> -->
 
         </div>
     </section>
 
-
     <div class="container">
-        <section class="home-about">
+        <section id="about" class="home-about">
             <div class="home-about-textbox parallax--box">
                 <h2>Who I am</h2>
                 <p><strong>Computer, code</strong> </p>
@@ -78,9 +74,7 @@
         <h2>My Work</h2>
         <!-- <div class="mywork">My Work:</div> -->
 
-
         <div class="portfolio-container">
-
             <figure class="portfolio-item">
                 <!-- adopt a pet-->
                 <img class="project-image" src="public/assets/adoptapetscreen1.png" alt="portfolio item 1: Adopt A Pet">
@@ -199,8 +193,6 @@
                                 src="public/assets/GitHub-Mark-32px.png">View
                             project on
                             Github</a>
-
-
                     </p>
 
                 </figcaption>
@@ -232,11 +224,7 @@
                 <li><img id="html-canvas-icon" class="footer-icon"
                         src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg">HTML Canvas</li>
 
-
-
-
                 <!-- <li>Blender(?)</li> -->
-
             </ul>
             <h3 class="tech-heading"><strong>Other technologies I've used and am familiar with:</strong></h3>
             <ul class="technology-list secondary">
@@ -247,36 +235,28 @@
                         src="https://www.vectorlogo.zone/logos/python/python-icon.svg">Python</li>
                 <li><img id="django-icon" class="footer-icon tech-bg"
                         src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg">Django</li>
-
-
             </ul>
         </div>
     </section>
 
     <section class="cta">
-        <div class="container">
+        <div class="contact-container">
             <h1 class="title title-cta">Interested in getting to know me?<span class="cta-subheadline">Let's talk</span>
             </h1>
-            <form class="contact-section">
+            <form id="contact" class="contact-section">
 
                 <input type="text" class="contact-textfield name" placeholder="Enter name">
                 <input type="email" class="contact-textfield email" placeholder="Enter email">
-                <input type="text" class="contact-textfield message" placeholder="Enter message">
-
-                </input>
+                <textarea type="text" class="contact-textfield message" placeholder="Enter message"></textarea>
+                <a class="btn btn-contact anim-btn-down"><span>Contact Me</span><a>
 
 
             </form>
-            <a class="btn anim-btn-down"><span>Contact Me</span><a>
         </div>
     </section>
 
-
     <footer>
-
-
         <div class="container">
-
             <div class="col-3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro architecto explicabo sunt commodi
                     enim natus dolore, odio eveniet qui sed dignissimos inventore ex corporis tempora, nostrum et,
@@ -286,10 +266,6 @@
                     pariatur consequatur velit dignissimos.
                 </p>
             </div>
-
-
-
-
 
         </div>
     </footer>

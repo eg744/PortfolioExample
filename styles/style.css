@@ -1,4 +1,4 @@
-/* Here's all my styling, working with plain CSS. I'm learning to be better about keeping it DRY but I still have work to do. I'm pretty sure there are optimizations I can make. I'm in the process of gaining a deeper understanding of styling and web design.*/
+/* Here's all my styling, working with plain CSS. I'm open to working with different styling frameworks/libraries but I haven't yet. I'm learning to be better about keeping it DRY but I still have work to do. In the process of gaining a deeper understanding of styling and web design.*/
 
 :root {
 	--gap: 2em;
@@ -14,6 +14,7 @@
 	--tunnel-color-primary: #b45c0a;
 	--tunnel-color-secondary: #d11d4a;
 	--burger-bg-color: rgb(219, 197, 197);
+	--nav-color-opaque: rgba(255, 255, 255, 0.06);
 	/* --main-bg-color: linear-gradient(#000 80%, rgb(36, 36, 36)); */
 	--main-bg-color: linear-gradient(#000 70%, #242424);
 }
@@ -21,6 +22,10 @@
 * {
 	box-sizing: border-box;
 	transition: all ease-in-out 200ms;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -111,34 +116,30 @@ img {
 /* ==Nav== */
 header {
 	background: #000;
-	/* padding: 0;
-	margin: 0; */
 }
 nav {
+	/* position: fixed; */
+
 	width: 100vw;
 	height: 6rem;
 	/* border-bottom: 3px solid #f1f1f1; */
 	/* padding: 0 0.5rem; */
 	display: flex;
-	/* flex-direction: row; */
-	/* align-items: stretch; */
 	justify-content: space-between;
-	background: #000;
+	background: var(--nav-color-opaque);
 	color: var(--elem-color-main);
-	/* margin: 0 auto; */
-
-	/* outline: 2px solid red; */
 }
 .primary-navigation {
-	padding: 18px;
+	padding: 1.5rem;
 
 	display: flex;
 	flex-direction: row nowrap;
 	align-items: center;
-	justify-content: space-evenly;
+	/* Not sure how I want nav icons spaced */
+	justify-content: flex-end;
 	list-style: none;
 	/* background: #000; */
-	background: rgba(255, 255, 255, 0.06);
+	background: var(--nav-color-opaque);
 	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 	backdrop-filter: blur(10px);
 	color: #fff;
@@ -175,6 +176,7 @@ nav {
 	.primary-navigation {
 		--gap: 2em;
 		z-index: 1000;
+		justify-content: space-around;
 
 		flex-flow: column nowrap;
 		position: fixed;
@@ -243,7 +245,8 @@ nav {
 	box-sizing: border-box;
 
 	font-size: var(--font-med);
-	padding: 18px;
+	padding: 1.5rem;
+	margin: 2rem;
 }
 .nav-item a {
 	display: block;
@@ -460,6 +463,8 @@ nav {
 	/* width: 100%;
 	height: 100%; */
 	object-fit: contain;
+	box-shadow: 3px 5px 20px var(--elem-color-secondary);
+
 	/* cursor: pointer; */
 }
 .portfolio-description {
@@ -572,7 +577,7 @@ nav {
 .technology-list {
 	padding: 0;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
 	margin: var(--gap);
@@ -583,7 +588,9 @@ nav {
 }
 .technology-list li {
 	outline: 1px solid red;
-	max-width: 9rem;
+	margin: 0.5em;
+	padding: 0.01em;
+	max-width: 8rem;
 	min-height: 5rem;
 	max-height: 8rem;
 	height: 9rem;
@@ -640,3 +647,68 @@ nav {
 }
 
 /* ==Contact form== */
+.contact-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.contact-section {
+	/* box-sizing: border-box; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 40em;
+	/* top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); */
+	position: relative;
+}
+form {
+	padding-bottom: 1em;
+	border-radius: 10px;
+	margin: 30px;
+	background-color: var(--nav-color-opaque);
+}
+.contact-textfield {
+	font-size: 1em;
+	width: 90%;
+	height: 5em;
+	margin-top: 20px;
+	padding-left: 10px;
+	border: 1px solid black;
+
+	color: #000;
+
+	margin: 1em;
+	/* padding: 2em; */
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px var(--elem-color-secondary);
+	background-color: #fff;
+}
+.name {
+	/* width: 50%; */
+}
+.name::before {
+	content: 'name';
+}
+.name,
+.email {
+	height: 4em;
+	width: 70%;
+}
+textarea {
+	width: 300px;
+	height: 150px;
+}
+.message {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.25em;
+	height: 10em;
+	padding-top: 1em;
+	padding-left: 1.01em;
+}
+.btn-contact {
+	font-size: 1.25em;
+	width: 50%;
+}
