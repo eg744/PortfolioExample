@@ -22,6 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
+	// Email copy
+	document.getElementById('copy-mail').addEventListener('click', () => {
+		// add email to clipboard
+		console.log(navigator);
+		navigator.clipboard.writeText(
+			document.getElementById('copy-mail-input').value
+		);
+
+		// add class
+		document.getElementById('copy-mail').classList.add('copied');
+
+		setTimeout(() => {
+			document.getElementById('copy-mail').classList.remove('copied');
+		}, 3000);
+	});
+
 	// function setTunnelStyles(){
 	// 	const styles={width: `${width}`,
 	// 			height: `${height}`,
