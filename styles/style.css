@@ -16,7 +16,7 @@
 	--burger-bg-color: rgb(219, 197, 197);
 	--nav-color-opaque: rgba(255, 255, 255, 0.06);
 	/* --main-bg-color: linear-gradient(#000 80%, rgb(36, 36, 36)); */
-	--main-bg-color: linear-gradient(#000 70%, #242424);
+	--main-bg-color: linear-gradient(#000 60%, #242424);
 }
 
 * {
@@ -118,8 +118,9 @@ header {
 	background: #000;
 }
 nav {
-	/* position: fixed; */
-
+	position: fixed;
+	top: 0;
+	z-index: 999;
 	width: 100vw;
 	height: 6rem;
 	/* border-bottom: 3px solid #f1f1f1; */
@@ -131,7 +132,7 @@ nav {
 }
 .primary-navigation {
 	padding: 1.5rem;
-
+	border: 1px solid #000;
 	display: flex;
 	flex-direction: row nowrap;
 	align-items: center;
@@ -172,6 +173,8 @@ nav {
 	nav {
 		height: 2rem;
 		font-size: 1.5rem;
+		/* background: var(--nav-color-opaque); */
+		background: none;
 	}
 	.primary-navigation {
 		--gap: 2em;
@@ -459,6 +462,11 @@ nav {
 	letter-spacing: 1px;
 	padding-top: 1em;
 }
+.project-description {
+	font-size: var(--font-med);
+	padding: 3rem;
+	margin: 1rem;
+}
 .project-image {
 	/* width: 100%;
 	height: 100%; */
@@ -690,23 +698,25 @@ form label {
 	margin-bottom: 0;
 	left: 50px;
 }
-.name {
-	/* width: 50%; */
-}
 .name,
 .email {
 	height: 4em;
 	width: 70%;
 }
-
 .message {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1.25em;
+	font-size: var(--font-small);
 	height: 10em;
 	padding-top: 1em;
 	padding-left: 1.01em;
 }
 .btn-contact {
-	font-size: 1.25em;
+	font-size: var(--font-med);
 	width: 50%;
+}
+#formsubmit {
+	margin-top: 1em;
+}
+#formsubmit a {
+	color: var(--elem-color-secondary);
 }
