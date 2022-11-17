@@ -22,34 +22,47 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
-	// Email copy
-	document.getElementById('copy-mail').addEventListener('click', () => {
-		// add email to clipboard
-		console.log(navigator);
-		navigator.clipboard.writeText(
-			document.getElementById('copy-mail-input').value
-		);
+	// Nav background on scroll larger screen sizes
+	let lastKnownScrollPosition = 0;
+	let ticking = false;
 
-		// add class
-		document.getElementById('copy-mail').classList.add('copied');
+	function navBackground(scrollPos) {
+		if (scrollPos > 200) {
+			primaryNavbar.classList.add('nav-bg-color');
+		} else {
+			primaryNavbar.classList.remove('nav-bg-color');
+		}
+	}
 
-		setTimeout(() => {
-			document.getElementById('copy-mail').classList.remove('copied');
-		}, 3000);
+	document.addEventListener('scroll', (e) => {
+		lastKnownScrollPosition = window.scrollY;
+
+		if (!ticking) {
+			window.requestAnimationFrame(() => {
+				navBackground(lastKnownScrollPosition);
+				ticking = false;
+			});
+			ticking = true;
+		}
 	});
 
-	// function setTunnelStyles(){
-	// 	const styles={width: `${width}`,
-	// 			height: `${height}`,
-	// 			border-radius: ${borderRadius};
-	// 			position: absolute;
-	// 			border: ${border};
+	// Email copy
+	// document.getElementById('copy-mail').addEventListener('click', () => {
+	// 	// add email to clipboard
+	// 	console.log(navigator);
+	// 	navigator.clipboard.writeText(
+	// 		document.getElementById('copy-mail-input').value
+	// 	);
 
-	// 			box-shadow: ${boxShadowOuter},
-	// 			${boxShadowInner};
-	// 			transform: rotate(${rotateDeg}) translateY(${translateY}) translateZ(${translateZ})`}`
-	// }
+	// 	// add class
+	// 	document.getElementById('copy-mail').classList.add('copied');
 
+	// 	setTimeout(() => {
+	// 		document.getElementById('copy-mail').classList.remove('copied');
+	// 	}, 3000);
+	// });
+
+	// CSS "tunnel" experiment
 	function createCssTunnel(
 		width,
 		height,
@@ -92,17 +105,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			animationDelay = animationDelay + 0.2;
 		}
 	}
-	createCssTunnel(
-		100,
-		100,
-		100,
-		'5px #e68608 solid',
-		'0px 0px 20px #b45c0a, inset 0px 0px 20px #b45c0a',
-		'0px 0px 60px #d11d4a, inset 0px 0px 60px #d11d4a',
-		180,
-		0,
-		0,
-		1,
-		0.1
-	);
+	// createCssTunnel(
+	// 	100,
+	// 	100,
+	// 	100,
+	// 	'5px #e68608 solid',
+	// 	'0px 0px 20px #b45c0a, inset 0px 0px 20px #b45c0a',
+	// 	'0px 0px 60px #d11d4a, inset 0px 0px 60px #d11d4a',
+	// 	180,
+	// 	0,
+	// 	0,
+	// 	1,
+	// 	0.1
+	// );
 });
