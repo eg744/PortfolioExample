@@ -4,6 +4,6 @@ Improving my web design and CSS skills, I had fun making some new things with CS
 
 3 major breakpoints for responsive design.
 
-ElijahGillit.com
+www.ElijahGillit.com
 
 Thanks for visiting! 
