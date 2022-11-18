@@ -57,9 +57,10 @@
 
     <div class="container">
         <section id="about" class="home-about">
-            <div class="home-about-textbox parallax--box">
+            <div class="home-about-textbox">
                 <h2>Who I am</h2>
-                <p><strong>Computer, code</strong> </p>
+                <p class="about-me-visible">Hello </p>
+
             </div>
         </section>
     </div>
@@ -76,7 +77,14 @@
         <div class="portfolio-container">
             <figure class="portfolio-item">
                 <!-- adopt a pet-->
-                <img class="project-image" src="public/assets/adoptapetscreen1.png" alt="portfolio item 1: Adopt A Pet">
+                <div class="image-scroll-container">
+                    <img id="aap-image-1" class="scroll-image aap-image" src="public/assets/adoptapetscreen1.png"
+                        alt="portfolio item 1: Adopt A Pet">
+                    <img id="aap-image-2" class="scroll-image aap-image" src="public/assets/adoptapetscreen2.webp"
+                        alt="Adopt A Pet search result">
+                </div>
+
+
                 <figcaption class="portfolio-description item-1">
                     <h3 class="project-title">Adopt-A-Pet</h3>
                     <p class="project-description">Pet adoption website made using Next.js, content from Petfinder API
@@ -115,13 +123,21 @@
 
             <figure class="portfolio-item">
                 <!-- Fractal generator -->
-                <img class="project-image" src="public/assets/fractalscreen1.png"
-                    alt="portfolio item 2: Fractal generator">
+                <div class="image-scroll-container">
+                    <img id="fractal-image-1" class="scroll-image fractal-image"
+                        src="public/assets/fractal_shape_green.png" alt="portfolio item 2: Fractal generator">
+                    <img id="fractal-image-2" class="scroll-image fractal-image"
+                        src="public/assets/fractal_shape_blue.png" alt="portfolio item 2: Fractal generator">
+                    <img id="fractal-image-3" class="scroll-image fractal-image"
+                        src="public/assets/fractal_shape_red.png" alt="portfolio item 2: Fractal generator">
+                </div>
+
                 <figcaption class="portfolio-description">
                     <h3 class="project-title">Fractal generator</h3>
 
                     <div class="project-title"></div>
-                    <p class="project-description">HTML Canvas program that creates 2D fractal shapes</p>
+                    <p class="project-description">Generate, customize and download beautiful fractal shapes. </p>
+                    <p>HTML Canvas and Javascript program creates 2D fractal shapes</p>
 
 
                     <p>

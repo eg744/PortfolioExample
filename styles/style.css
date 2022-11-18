@@ -216,7 +216,7 @@ nav {
 	padding-bottom: 3vh;
 	height: 45rem;
 	right: 50px;
-	background-image: url(../public/assets/hero-bg.jpg);
+	background-image: url(../public/assets/hero-bg.webp);
 	background-repeat: no-repeat;
 	background-size: contain;
 	/* background-size: cover; */
@@ -358,20 +358,14 @@ nav {
 } */
 
 .portfolio-item {
+	justify-content: center;
 	border: 5px var(--elem-color-secondary);
 	border-style: none ridge;
-	/* border-style: none inset; */
 	border-radius: 40px;
 	margin: 2rem 1rem;
 	padding: 3rem;
-	/* border-image: repeating-linear-gradient(
-			3deg,
-			var(--elem-color-main),
-			var(--elem-color-secondary),
-			var(--tunnel-color-primary)
-		)
-		60; */
 	width: 50rem;
+	min-height: 50rem;
 	height: fit-content;
 	position: relative;
 	overflow: hidden;
@@ -395,6 +389,7 @@ nav {
 
 	/* cursor: pointer; */
 }
+
 .portfolio-description {
 	font-size: 1.25em;
 	width: 100%;
@@ -614,6 +609,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+	/* Display only first image on smaller sizes */
+	.image-scroll-container .scroll-image:not(:first-child) {
+		display: none;
+	}
 	.title-name {
 		transform: translateX(30px);
 	}
@@ -777,6 +776,89 @@ footer {
 		.portfolio-item:hover:nth-child(even)
 		.portfolio-description {
 		clip-path: circle(70% at 50% 50%);
+	}
+
+	/* fractal image fade between */
+	.portfolio-item {
+		display: flex;
+	}
+	.image-scroll-container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.image-scroll-container img {
+		position: absolute;
+
+		-webkit-animation-name: fade;
+		/* -webkit-animation-iteration-count: infinite; */
+		animation-duration: 5s;
+		animation-name: fade;
+		animation-iteration-count: infinite;
+		animation-duration: 15s;
+	}
+	.image-scroll-container .fractal-image {
+		top: 15%;
+		left: 0%;
+	}
+	.image-scroll-container #aap-image-1 {
+		top: 0%;
+		left: 15%;
+	}
+	.image-scroll-container #aap-image-2 {
+		top: 10%;
+		left: 0%;
+	}
+
+	@keyframes fade {
+		0% {
+			opacity: 0;
+		}
+		20% {
+			opacity: 1;
+		}
+		33% {
+			opacity: 1;
+		}
+		53% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	@keyframes fade {
+		0% {
+			opacity: 0;
+		}
+		20% {
+			opacity: 1;
+		}
+		33% {
+			opacity: 1;
+		}
+		53% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	#fractal-image-1 {
+		animation-delay: 0s;
+	}
+	#fractal-image-2 {
+		animation-delay: -5s;
+	}
+	#fractal-image-3 {
+		animation-delay: -10s;
+	}
+	#aap-image-1 {
+		animation-delay: -1s;
+	}
+	#aap-image-2 {
+		animation-delay: -8s;
 	}
 }
 
