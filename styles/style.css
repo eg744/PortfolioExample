@@ -54,15 +54,12 @@ img {
 	outline: none;
 	border-radius: 3em;
 	border: none;
-	gap: 2em;
+	gap: var(--gap);
 	user-select: none;
-	/* -webkit-transition: background-color 100ms linear; */
-	/* transition: all 350ms linear; */
 	overflow: hidden;
 	cursor: pointer;
 	padding: 0.4em 1.5em;
 	border-bottom: 4px solid var(--elem-color-secondary);
-	/* background-color: var(--elem-color-main); */
 	background: linear-gradient(
 		45deg,
 		var(--elem-color-main),
@@ -355,6 +352,11 @@ nav {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
+/* .portfolio-container:nth-child(odd) {
+	align-items: flex-start;
+	justify-content: right;
+} */
+
 .portfolio-item {
 	border: 5px var(--elem-color-secondary);
 	border-style: none ridge;
@@ -374,6 +376,7 @@ nav {
 	position: relative;
 	overflow: hidden;
 }
+
 .project-title {
 	font-size: var(--font-large);
 	letter-spacing: 1px;
@@ -587,8 +590,17 @@ footer {
 	background: var(--footer-color-opaque);
 	border-radius: 10px 10px 0px 0px;
 }
+.contact-other {
+	display: flex;
+	gap: var(--gap);
+	justify-content: space-between;
+}
+.contact-other span {
+	padding-top: 1em;
+}
 .linkedin {
-	text-decoration: none;
+	height: 4em;
+	width: 4em;
 }
 
 /* ==Media queries== */
@@ -690,6 +702,28 @@ footer {
 		background: var(--nav-color-opaque);
 
 		/* background: var(--nav-color-opaque); */
+	}
+}
+
+/* Largest supported size  */
+@media (min-width: 1900px) {
+	.portfolio-container {
+		width: 110em;
+	}
+	.portfolio-item {
+		margin: 5em;
+	}
+}
+
+@media (min-width: 900px) {
+	/* 768 */
+
+	.portfolio-container {
+		flex-direction: column;
+	}
+	/* alternating sides*/
+	.portfolio-item:nth-child(odd) {
+		align-self: flex-end;
 	}
 
 	.portfolio-description {
