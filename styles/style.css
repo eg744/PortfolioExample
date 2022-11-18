@@ -416,23 +416,7 @@ nav {
 	transform: translateY(5px);
 }
 
-/* ==CTA== */
-.cta {
-	display: block;
-	margin-top: 0.1rem;
-}
-.cta-subheadline {
-	display: block;
-	font-size: var(--font-med);
-	font-weight: bold;
-}
-
-/* ==Footer== */
-/* .col1 {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-} */
+/* ==Tech list== */
 .tech-heading {
 	display: block;
 	list-style: none;
@@ -507,6 +491,17 @@ nav {
 #django-icon {
 	padding: 1rem;
 	scale: 0.65;
+}
+
+/* ==CTA== */
+.cta {
+	display: block;
+	margin-top: 5rem;
+}
+.cta-subheadline {
+	display: block;
+	font-size: var(--font-med);
+	font-weight: bold;
 }
 
 /* ==Contact form== */
