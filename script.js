@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const pageTitle = document.querySelector('.title-name');
 
+	const readMoreButton = document.querySelector('.read-more-button');
+	const aboutMe = document.querySelector('.about-me-secondary');
+
 	// Toggle mobile menu
 	navbarToggle.addEventListener('click', () => {
 		navbarToggle.classList.toggle('change');
@@ -46,6 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
+	// Toggle read more section
+	readMoreButton.addEventListener('click', () => {
+		aboutMe.classList.toggle('about-visible');
+	});
+
 	// Email copy
 	// document.getElementById('copy-mail').addEventListener('click', () => {
 	// 	// add email to clipboard
@@ -62,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 	}, 3000);
 	// });
 
-	// CSS "tunnel" experiment
+	// CSS "tunnel" just for fun
 	function createCssTunnel(
 		width,
 		height,

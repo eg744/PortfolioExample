@@ -226,6 +226,62 @@ nav {
 	/* background-attachment: fixed; */
 }
 
+/* ==About me textbox== */
+.home-about-textbox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: var(--font-med);
+	font-weight: bold;
+	padding: 1em;
+}
+.read-more-button {
+	color: #000;
+	background: var(--elem-color-secondary);
+	border-radius: 10px;
+	cursor: pointer;
+	user-select: none;
+	width: 90%;
+}
+.read-more-button:hover {
+	scale: 1.1;
+}
+
+.about-me-secondary {
+	/* display: none; */
+	transform: translateY(-100%);
+	animation: fadeOut 500ms forwards;
+	z-index: -1;
+}
+.about-visible {
+	transform: translateY(0);
+	animation: fadein 500ms forwards;
+	z-index: 1;
+
+	/* transition: all 0.3s; */
+}
+
+/* .about-me-secondary[about-visible] {
+	animation: fadeIn 500ms forwards;
+} */
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 /* ==Animate css tunnel effect== */
 .animate-css-container {
 	/* padding: 5rem; */
