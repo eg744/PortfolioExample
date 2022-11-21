@@ -213,8 +213,9 @@ nav {
 /* ==home-hero== */
 .home-hero {
 	margin-top: 2rem;
+	margin-bottom: 3em;
 	padding-bottom: 3vh;
-	height: 45rem;
+	height: 50rem;
 	right: 50px;
 	background-image: url(../public/assets/hero-bg.webp);
 	background-repeat: no-repeat;
@@ -257,13 +258,7 @@ nav {
 	transform: translateY(0);
 	animation: fadein 500ms forwards;
 	z-index: 1;
-
-	/* transition: all 0.3s; */
 }
-
-/* .about-me-secondary[about-visible] {
-	animation: fadeIn 500ms forwards;
-} */
 
 @keyframes fadeIn {
 	0% {
@@ -279,6 +274,34 @@ nav {
 	}
 	100% {
 		opacity: 0;
+	}
+}
+
+.arrow {
+	display: inline-block;
+}
+
+.arrow-opened {
+	animation: arrowOpen 0.3s forwards;
+}
+.arrow-closed {
+	animation: arrowClose 0.3s forwards;
+}
+
+@keyframes arrowOpen {
+	0% {
+		transform: rotate(0deg) translateY(0px);
+	}
+	100% {
+		transform: rotate(-180deg) translateY(-5px);
+	}
+}
+@keyframes arrowClose {
+	0% {
+		transform: rotate(-180deg) translateY(0px);
+	}
+	100% {
+		transform: rotate(0deg) translateY(0px);
 	}
 }
 
@@ -642,7 +665,8 @@ footer {
 	justify-content: space-between;
 }
 .contact-other span {
-	padding-top: 1em;
+	font-size: 1.2em;
+	padding-top: 0.8em;
 }
 .linkedin {
 	height: 4em;

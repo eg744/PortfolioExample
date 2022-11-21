@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const readMoreButton = document.querySelector('.read-more-button');
 	const aboutMe = document.querySelector('.about-me-secondary');
 
-	// Toggle mobile menu
+	const aboutMeArrow = document.getElementById('read-more-arrow');
+
 	navbarToggle.addEventListener('click', () => {
 		navbarToggle.classList.toggle('change');
 		primaryNavbar.classList.toggle('toggleNav');
@@ -52,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Toggle read more section
 	readMoreButton.addEventListener('click', () => {
 		aboutMe.classList.toggle('about-visible');
+		aboutMeArrow.classList.toggle('arrow-closed');
+		aboutMeArrow.classList.toggle('arrow-opened');
 	});
 
 	// Email copy
