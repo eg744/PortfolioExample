@@ -108,6 +108,11 @@ img {
 	display: block;
 	font-size: var(--font-med-large);
 }
+.external-links {
+	margin: 0 auto;
+	text-align: left;
+	margin-left: 6em;
+}
 
 /* ==Nav== */
 header {
@@ -688,7 +693,8 @@ footer {
 	.image-scroll-container .scroll-image:not(:first-child) {
 		display: none;
 	}
-	.title-name {
+	.title-name,
+	.external-links {
 		transform: translateX(30px);
 	}
 
@@ -950,7 +956,8 @@ footer {
 		transform: translateX(5.5em);
 		margin-left: 0;
 	}
-	.github-link {
+	.github-link,
+	.linkedin-link {
 		font-size: 1.5em;
 	}
 
