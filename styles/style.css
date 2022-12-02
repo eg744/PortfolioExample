@@ -800,6 +800,7 @@ footer {
 
 	.portfolio-container {
 		flex-direction: column;
+		align-items: center;
 	}
 	/* alternating sides*/
 	.portfolio-item:nth-child(odd) {
