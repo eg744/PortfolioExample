@@ -980,9 +980,15 @@ footer {
 	.primary-navigation {
 		width: 6em;
 	}
+
+	/* Portfolio */
+	.portfolio-item {
+		/* font-size: ; */
+	}
 	.portfolio-container {
 		margin: 0.7em;
-		font-size: 0.9rem;
+		padding: 0;
+		font-size: 0.8rem;
 	}
 	.project-description {
 		margin: 0;
