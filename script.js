@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const primaryNavbar = document.querySelector('.primary-navigation');
 
 	const pageTitle = document.querySelector('.title-name');
+	const externalLinks = document.querySelector('.external-links');
 
 	const readMoreButton = document.querySelector('.read-more-button');
 	const aboutMe = document.querySelector('.about-me-secondary');
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		navbarToggle.classList.toggle('change');
 		primaryNavbar.classList.toggle('toggleNav');
 		pageTitle.classList.toggle('translateTitle');
+		externalLinks.classList.toggle('translateTitle');
 
 		const isVisible = primaryNavbar.getAttribute('data-visible');
 
