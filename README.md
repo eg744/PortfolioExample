@@ -1,9 +1,10 @@
-My personal portfolio site (Version 1)
+## My personal portfolio site (Version 1)
+### www.ElijahGillit.com
+
 
 Improving my web design and CSS skills, I had fun making some new things with CSS and improving some old ones. 
 
 3 major breakpoints for responsive design.
 
-www.ElijahGillit.com
 
 Thanks for visiting! 
