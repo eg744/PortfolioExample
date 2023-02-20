@@ -1,5 +1,5 @@
 ## My personal portfolio site (Version 1)
-### www.ElijahGillit.com
+### https://elijahgillit.com/
 
 
 Improving my web design and CSS skills, I had fun making some new things with CSS and improving some old ones. 
