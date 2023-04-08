@@ -222,13 +222,13 @@ nav {
 	margin-top: 2rem;
 	margin-bottom: 3em;
 	padding-bottom: 3vh;
-	height: 50rem;
+	height: 60rem;
 	right: 50px;
 	background-image: url(../public/assets/hero-bg.webp);
 	background-repeat: no-repeat;
 	background-size: contain;
 	/* background-size: cover; */
-	background-position: center;
+	background-position: bottom;
 
 	/* "parallax" */
 	/* background-attachment: fixed; */
@@ -258,13 +258,16 @@ nav {
 .about-me-secondary {
 	/* display: none; */
 	transform: translateY(-100%);
-	animation: fadeOut 500ms forwards;
+	animation: fadeOut 300ms forwards;
 	z-index: -1;
+	height: 0;
+	overflow: visible;
 }
 .about-visible {
 	transform: translateY(0);
-	animation: fadein 500ms forwards;
+	animation: fadein 300ms forwards;
 	z-index: 1;
+	height: 11rem;
 }
 
 @keyframes fadeIn {
@@ -967,6 +970,9 @@ footer {
 	.title-name {
 		font-size: 3em;
 	}
+	.home-hero {
+		height: 35em;
+	}
 	/* Translate less to stay on screen. Added external links. margin 0 caused overflow. */
 	.translateTitle {
 		transform: translateX(5rem);
@@ -987,6 +993,8 @@ footer {
 		font-size: 0.8rem;
 	}
 	.project-description {
+		padding: 0;
+		font-size: 1em;
 		margin: 0;
 	}
 
