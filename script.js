@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const primaryNavbar = document.querySelector('.primary-navigation');
 
 	const pageTitle = document.querySelector('.title-name');
-	const externalLinks = document.querySelector('.external-links');
+	const externalLinks = document.querySelector('.external');
 
 	const readMoreButton = document.querySelector('.read-more-button');
 	const aboutMe = document.querySelector('.about-me-secondary');
