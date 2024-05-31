@@ -508,6 +508,11 @@ nav {
 	transform: translateY(5px);
 }
 
+.fractal-mandelbrot-container {
+	display: flex;
+	justify-content: space-between;
+}
+
 /* ==Tech list== */
 .tech-heading {
 	display: block;
